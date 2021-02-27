@@ -1,0 +1,157 @@
+* {
+        box-sizing: border-box;
+      }
+      body {
+        background-color: bisque;
+        padding: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .main {
+          max-width: 1000px;
+          margin: auto;
+          
+        }
+        .row {
+          margin: 10px -16px;
+        }
+        .row,
+        .row > .column {
+          padding: 8px;
+        }
+        .column {
+          float: left;
+          width: 33.33%;
+          display: none;
+        }
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+        .content {
+          background-color: #666;
+          padding: 10px;
+          text-align: center;
+        }
+      
+        .show {
+            display: block;
+        }
+ 
+        .btn {
+            border: none;
+            outline: none;
+            padding: 12px 16px;
+            background-color: #f1f1f1;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #ddd;
+        }
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+div.content img {
+  text-align: center;
+  max-width: 355px;
+  max-height: 355px;
+ }
+div.picture {
+  display: inline-block;
+  background-color: white;
+  width:360px;
+  height:360px;
+}
+/*style for dropdown*/
+.dropdown {
+  position: relative;
+/*  display: inline-block;*/
+  text-align: center;
+}
+.hide {
+  display: none;
+  position: absolute;
+  background-color: blue;
+  max-width: 160px;
+  overflow: auto;
+  z-index: 1;
+}
+.dropdown:hover, .dropdown-content {
+  display: block;
+}
+.hide {
+  display: none;
+}
+/*.drop {
+  text-align: center;
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+.hide ul {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.drop:hover, .drop:focus {
+  border-block-color: red;
+}*/
+
+/*style for modal*/
+#myImg {
+  cursor: pointer;
+  transition: 0.4s;
+}
+#myImg:hover {opacity: 0.6;}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #666;
+}
+.test {
+  margin: auto;
+  display: block;
+  width: 70%;
+  max-width: 600px;
+}
+#caption {
+  margin: auto;
+  display: block;
+  width: 70%;
+  max-width: 600px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.4s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
