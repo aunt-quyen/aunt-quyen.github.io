@@ -1,4 +1,4 @@
-** Width between 1200x to 0
+** Width between 1200px to 0
  *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  */
 
@@ -17,3 +17,13 @@
 /** Width between 768px to 991px
  *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  */
+ @media screen and (max-width: 800px) {
+   .column {
+     width: 50%;
+   }
+ }
+ @media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
