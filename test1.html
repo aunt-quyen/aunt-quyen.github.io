@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<title>Foods</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=divice-width, initial-scale=1">
+
+<link href="styles/test1.css" rel="stylesheet">
+<link href="styles/responsive1.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav id="mobile_menu"></nav>
+  <div class="reponsive"></div>
+  <div class="container">
+    <h2>Quyen's Food</h2>
+    <select id="select"></select>
+  <button onclick="start()">Click to Speak</button>
+<!--    <div id="out"><p>My Food is available!</p><p>[en-US] 
+</div>-->
+  </div>
+<div id="myBtnFood">
+    <button class="btn active" onclick="filterSelection('all')">All</button>
+    <button class="btn" onclick="filterSelection('main course')">Main Course</button>
+    <button class="btn" onclick="filterSelection('tranditional')">Tranditional Dishes</button>
+    <button class="btn" onclick="filterSelection('dessert')">Dessert</button>
+</div>
+
+<div class="row">
+    <div class="column main course">
+      <div class="content">
+        <div class="picture">
+            <a target="_blank" href="dish.html"><img src="foods/image9.jpg" alt="main course"  style="width: 75%"></a>
+        </div>
+      <h4>Beef Brisket with beer</h4>
+      <p>Ingredients</p>
+      </div>
+    </div>
+    <div class="column main course">
+      <div class="content">
+        <div class="picture">
+            <a target="_blank" href="foods/bread.jpg"><img src="foods/bread.jpg" alt="main course" style="width: 75%"></a>
+        </div>
+      <h4>Butter Garlic Bread</h4>
+      <p>Ingredients</p>
+      </div>
+    </div>
+    
+    <div class="column tranditional">
+      <div class="content">
+        <div class="picture">
+            <a target="_blank" href="foods/image10.jpg"><img src="foods/image10.jpg" alt="tranditional" style="width: 75%"></a>
+        </div>
+      <h4>Thit kho</h4>
+      <p>Ingredients</p>
+      </div>
+    </div>
+    <div class="column tranditional">
+      <div class="content">
+        <div class="picture">
+            <a target="_blank" href="foods/salad.jpg"><img src="foods/salad.jpg" alt="tranditional" style="width: 75%"></a>
+        </div>
+      <h4>Herring Under A Fur Coat</h4>
+      <p>Ingredients</p>
+      </div>
+    </div>
+    <div class="column tranditional">
+      <div class="content">
+        <div class="picture">
+            <a target="_blank" href="foods/caviar.jpg"><img src="foods/caviar.jpg" alt="tranditional"  style="width: 75%"></a>
+        </div>
+      <h4>Caviar</h4>
+      <p>Ingredients</p>
+      </div>
+    </div>
+    <div class="column main course">
+      <div class="content">
+        <div class="picture" id="grill_eggplant">
+            <a target="_blank" href="foods/image12.jpg"><img src="foods/image12.jpg" alt="main course" style="width: 75%"></a>           
+        </div>
+      <h4>Grill Eggplants</h4>
+      <p>Ingredients</p>
+      </div>
+    </div>
+    <div class="column dessert">
+      <div class="content">
+        <div class="picture">
+            <a target="_blank" href="foods/image6.jpg"><img src="foods/image6.jpg" alt="dessert" style="width: 75%"></a>
+        </div>
+        <h4>Sweets</h4>
+        <p>Ingredients</p>
+      </div>
+    </div>
+      <div class="column main course">
+        <div class="content">
+          <div class="picture">
+            <a target="_blank" href="foods/image3.jpg"><img src="foods/image3.jpg" alt="main course" style="width: 75%"></a>
+          </div>
+          <div class="dropdown">
+          <h4 onclick="myFunction()" class="drop">Meat</h4>
+          <div id = "myDropdown" class="hide">
+            <ul>Flour<br>
+            Ground pork<br>
+            Musshrooms
+            </ul>
+        </div>
+      </div>
+          <p>Ingredients</p>
+        </div>
+     </div>
+     <div class="column main course tranditional">
+      <div class="content">
+        <div class="picture">
+            <a target="_blank" href="foods/banhxeo.jpg"><img src="foods/banhxeo.jpg" alt="tranditional" style="width: 75%"></a>
+        </div>
+        <h4>Vietnamese Crepes</h4>
+        <p>Ingredients</p>
+      </div>
+   </div>
+   <div class="column dessert">
+    <div class="content">
+      <div class="picture">
+        <a target="_blank" href="foods/che.jpg"><img src="foods/che.jpg" alt="dessert" style="width: 75%"></a>
+      </div>
+      <h4>Sweets</h4>
+      <p>Ingredients</p>
+    </div>
+  </div>
+  <div class="column main course">
+    <div class="content">
+      <div class="picture">
+        <a target="_blank" href="foods/ittran.jpg"><img src="foods/ittran.jpg" alt="main course" style="width: 75%"></a>
+      </div>
+      <h4>Banh It Tran</h4>
+      <p>Ingredients</p>
+<!--      <ul>Ground Pork</ul>
+      <ul>Gloutious Flour</ul>-->
+    </div>
+  </div>
+  <div class="column main course">
+    <div class="content">
+      <div class="picture">
+        <a target="_blank" href="foods/banhbao.jpg"><img id="myImg" src="foods/banhbao.jpg" alt="Banh Bao" style="width: 75%"></a>
+      </div>
+      <h4>Banh Bao</h4>
+      <p>Ingredients</p>
+    </div>
+  </div>
+  <!--Modal-->
+  <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="test" id="img01">
+    <div id="caption"></div>
+  </div>
+   
+</div>
+
+
+<script>
+ var $$$ = function(id) {
+    return document.getElementById(id);
+  };
+  var grillEggplant = function() {
+    alert ("the grillEggplant function is being run.");
+  };
+  window.onload = function() {
+    $$$("grill_eggplant").onclick = grillEggplant;
+  };
+
+  
+ /*drop down*/
+  function myFunction() {
+ document.getElementById("myDropdown").classList.toggle("hide");
+}
+
+/*hide/show*/
+$(document).ready(function(){
+  $("button").click(function(){
+    $("ul").toggle();
+  });
+});
+
+</script>
+
+
+<!--Script for sound-->
+<script>
+  var out = document.getElementById('select');
+  var synth = window.speechSynthesis;
+  var speaking;
+  if (synth) {
+    out.innerHTML = '<p>My Food is available!</p>';
+    speak();
+  }
+  else {
+    out.innerHTML = '<p>My Food is not available!</p>';
+  }
+  
+  function speak() {
+    if (speaking) return;
+    var voices = synth.getVoices();
+    if (voices.length) {
+      speaking = true;
+      for (var i = 0; i < voices.length; i++) {
+        out.innerHTML += 'What is an images<img>[' + voices[i].lang + '] ' + voices[i].voiceURI + ' -- ' + voices[i].name + '</img>';
+        var hello = new SpeechSynthesisUtterance('my food is ' + 'so delicious');
+        hello.voice = voices[i];
+        synth.speak(hello);
+      }
+    }
+    else if (synth.onvoiceschanged !== undefined) {
+      synth.onvoiceschanged = speak;
+    }
+  }
+  </script>
+
+<script src="js/main.js"></script>
+<script src="js/modal.js"></script>
+
+
+</body>
+</html>
