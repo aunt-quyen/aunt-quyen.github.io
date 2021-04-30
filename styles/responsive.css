@@ -19,11 +19,43 @@
  */
  @media screen and (max-width: 800px) {
    .column {
-     width: 50%;
+     width: 100%;
+  }
+   .picture img {
+     width: 100%;
+     display: inline-block;
    }
- }
+    }
  @media screen and (max-width: 600px) {
   .column {
     width: 100%;
   }
+/*  .column img {
+    max-width: 100%;
+    float: none;
+    margin-left: 0;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+  }*/
+  .picture img {
+    width: 100%;
+    display: inline-block;
+  }
 }
+@media (max-width: 480px) {
+  .column {
+    width: 100%;
+  }
+  .picture img {
+    width: 100%;
+  }
+}
+@media (max-width: 320px) {
+  .column {
+    width: 100%;
+  }
+  .picture img {
+    width: 100%;
+  }
+}*/
