@@ -1,0 +1,12 @@
+@media screen and (max-width: 800px) {
+    .column {
+      width: 100%;
+   }
+    .picture img {
+      width: 100%;
+      display: inline-block;
+    }
+     }
+  @media screen and (max-width: 600px) {
+   .column {
+     width: 100%;
